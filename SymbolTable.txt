@@ -1,0 +1,7 @@
+1 a INT
+2 hiWHITESPACEworld STRING
+3 b INT
+4 6 INT
+5 c INT
+6 8 INT
+7 1 INT
