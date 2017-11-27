@@ -13,7 +13,7 @@ If you don't have linux on your machine, you can either use a VM or make a linux
 3) Run the Unbuntu setup when opening virtualbox program
  //Add more to this
  
-# Installing the clang and nasm
+# Installing clang and nasm
 1) Right click on the desktop, and press open terminal
 2) Now that you are on the terminal screen there are two commands that need to be run
 3) 1st command: sudo apt install nasm //This will install nasm to linux
