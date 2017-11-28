@@ -24,6 +24,7 @@ public class InterCodeGen {
 		String idVal;
 		int lookup;
 		int count = 1; //counter used for loop dec
+		int loopEnds = 0;
 		String type =""; //used for checking type
 		for(int i = 0; i < tokens.size(); i++){
 			token_stream = tokens.get(i); //getting a line of the array list of tokens
@@ -154,10 +155,11 @@ public class InterCodeGen {
 				}
 				
 				intercode.add(str);
+				count++;
 				break;
 			case "LEND":
-				intercode.add("end loop" + count);
-				count++;//incrementing count up for another loop dec
+				intercode.add("end loop" + (count - loopEnds));
+				loopEnds++;//incrementing count up for another loop dec
 				//return
 				break;
 			

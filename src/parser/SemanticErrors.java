@@ -33,8 +33,8 @@ public class SemanticErrors {
 		SemanticCheckFailed();
 	}
 	
-	public static void MissingLoopStart(int line){
-		System.err.println("Missing start to loop at line " + line);
+	public static void MissingLoopStart(){
+		System.err.println("Missing start to loop");
 		SemanticCheckFailed();
 	}
 	

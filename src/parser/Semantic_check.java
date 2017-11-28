@@ -14,6 +14,8 @@ public class Semantic_check {
 	String lc = "abcdefghijklmnopqrstuvwxyz_";
 	String uc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 	String digits = "0123456789";
+	int loopStart = 0;
+	int loopEnds = 0;
 	
 	public Semantic_check(SymbolTable t, ArrayList<ArrayList<Token>> token){
 		st = t;
@@ -33,6 +35,9 @@ public class Semantic_check {
 			
 			
 		}
+		if(loopStart< loopEnds){
+			SemanticErrors.MissingLoopStart();
+		}
 		System.out.println("Semantic check sucessful!");
 		
 		
@@ -47,6 +52,8 @@ public class Semantic_check {
 		int lookup;
 		int line = i;
 		boolean endFound = false;
+		//variables used for checking nested loops
+		
 		
 		switch(s){
 		case "CPRINT":
@@ -186,7 +193,7 @@ public class Semantic_check {
 			
 		case "LSTRT":
 			//checking if var's are declared
-			
+			loopStart ++;
 			//1st var
 			idVal = token_stream.get(2).getType();
 			idVal = idVal.substring(3);
@@ -217,14 +224,10 @@ public class Semantic_check {
 			break;
 			
 		case "LEND":
-			if(endFound){
-				endFound = false;
-			}
-			else{
-				SemanticErrors.MissingLoopStart(line);
-			}
+			loopEnds++;
 			
 		}
+		
 		
 		//looping through symbol table checking that int and str sizes are valid
 		String lentest = "";
