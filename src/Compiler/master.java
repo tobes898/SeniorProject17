@@ -31,9 +31,7 @@ public class master {
 			}
 		}
 		
-		for(int i = 0; i< arr.size();i++){
-			System.out.println(arr.get(i));
-		}
+		
 		
 		
 		for(int i = 0; i< arr.size(); i++){
@@ -59,7 +57,7 @@ public class master {
 		InterCodeGen intercode = new InterCodeGen(arr1, st);
 		
 		intercode.run();
-		intercode.printingInterCode();
+		//intercode.printingInterCode();
 		
 		ArrayList<String> intercodeArr = intercode.getInterCode();
 		

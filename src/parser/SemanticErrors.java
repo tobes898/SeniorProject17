@@ -33,6 +33,11 @@ public class SemanticErrors {
 		SemanticCheckFailed();
 	}
 	
+	public static void MissingLoopStart(int line){
+		System.err.println("Missing start to loop at line " + line);
+		SemanticCheckFailed();
+	}
+	
 	public static void MissingFuncEnd(int line){
 		System.err.println("Function end missing from loop found at line " + line);
 		SemanticCheckFailed();

@@ -18,7 +18,7 @@ public class LexAnalysis {
 
 	public void run() throws FileNotFoundException{
 		LexAnalysis lx = new LexAnalysis(); // var for lexer
-		Scanner input = new Scanner(new File("test1.txt")); //scanner for source code file
+		Scanner input = new Scanner(new File("source.txt")); //scanner for source code file
 		PrintWriter writer = new PrintWriter("tokens.txt"); //writer for token file
 		int counter = 1; //keeping track of line number
 		while(input.hasNextLine()){

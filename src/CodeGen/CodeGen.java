@@ -321,7 +321,7 @@ public class CodeGen {
 	
 	
 	public void buildASM() throws FileNotFoundException{
-		PrintWriter writer = new PrintWriter("target.asm");
+		PrintWriter writer = new PrintWriter("source.asm");
 		//printing to asm file
 		writer.println("extern printf"); //declaring the external printf function
 		writer.println();

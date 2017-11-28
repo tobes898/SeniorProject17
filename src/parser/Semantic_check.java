@@ -45,8 +45,8 @@ public class Semantic_check {
 	public void runSemanticCheck(String s, TypeChecker tc, ArrayList<Token> token_stream ,int i){
 		String idVal;
 		int lookup;
-		int line;
-		boolean endFound;
+		int line = i;
+		boolean endFound = false;
 		
 		switch(s){
 		case "CPRINT":
@@ -215,6 +215,14 @@ public class Semantic_check {
 			if(!endFound)
 				SemanticErrors.MissingLoopEnd(st.lookup(lookup).getLine());
 			break;
+			
+		case "LEND":
+			if(endFound){
+				endFound = false;
+			}
+			else{
+				SemanticErrors.MissingLoopStart(line);
+			}
 			
 		}
 		

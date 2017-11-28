@@ -1,9 +1,0 @@
-comet(a)("hi world");
-asteroid(b)(6);
-sun(c);
-earth(a);
-sun_end(c);
-quantum[b < 8];
-sun_run(c);
-blackhole(b)(+)1;
-quantum_end;
