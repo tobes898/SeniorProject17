@@ -158,8 +158,9 @@ public class InterCodeGen {
 				count++;
 				break;
 			case "LEND":
+				loopEnds++;
 				intercode.add("end loop" + (count - loopEnds));
-				loopEnds++;//incrementing count up for another loop dec
+				//incrementing count up for another loop dec
 				//return
 				break;
 			

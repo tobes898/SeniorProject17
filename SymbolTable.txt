@@ -1,2 +1,6 @@
 1 5 INT
 2 4 INT
+3 6 INT
+4 4 INT
+5 a INT
+6 6 INT

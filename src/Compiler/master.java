@@ -57,7 +57,7 @@ public class master {
 		InterCodeGen intercode = new InterCodeGen(arr1, st);
 		
 		intercode.run();
-		//intercode.printingInterCode();
+		intercode.printingInterCode();
 		
 		ArrayList<String> intercodeArr = intercode.getInterCode();
 		

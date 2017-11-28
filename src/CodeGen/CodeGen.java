@@ -21,6 +21,7 @@ public class CodeGen {
 	
 	String [] validStr ={"print", "seti", "setS", "func", "return","call","loop","end","inc","dec"};
 	
+	ArrayList<String> loopNames = new ArrayList<String>();
 	
 	public CodeGen(ArrayList<String> stream, SymbolTable t){
 		intercode = stream;
@@ -164,6 +165,7 @@ public class CodeGen {
 			case 7: //loop
 				if(func_check){
 					String loop_name = "loop" + stream.substring(4);
+					loopNames.add(loop_name);
 					//getting next stream
 					stream = intercode.get(i + 1);
 					i++;
@@ -188,11 +190,12 @@ public class CodeGen {
 					
 					
 					cmp = "cmp " + val + ", " + var;
-					loopEnd = jump + " " + loop_name;
+					loopEnd = jump + " ";
 					break;
 				}
 				else{
 					String loop_name = "loop" + stream.substring(4);
+					loopNames.add(loop_name);
 					//getting next stream
 					stream = intercode.get(i + 1);
 					i++;
@@ -218,7 +221,7 @@ public class CodeGen {
 					loopVar = var;
 					loopVal = val;
 					loopCmp = "cmp r12, rbx";
-					loopEnd = jump + " " + loop_name;
+					loopEnd = jump + " ";
 					break;
 				}
 			case 8: //end
@@ -226,14 +229,16 @@ public class CodeGen {
 					functions.add("mov rbx, " + loopVar );
 					functions.add("mov r12, " + loopVal);
 					functions.add(loopCmp);
-					functions.add(loopEnd);
+					functions.add(loopEnd + loopNames.get(loopNames.size()-1));
+					loopNames.remove(loopNames.size()-1);
 					break;
 				}
 				else{
 					main.add("mov rbx, " + loopVar );
 					main.add("mov r12, " + loopVal);
 					main.add(loopCmp);
-					main.add(loopEnd);
+					main.add(loopEnd + loopNames.get(loopNames.size()-1));
+					loopNames.remove(loopNames.size()-1);
 					break;
 				}
 			case 9://inc
