@@ -1,0 +1,32 @@
+Lexical Analysis Documentation:
+
+
+<CPRINT> - pluto (\33) - prints what ever the ascii character code is on the screen (pluto only supports ASCII character codes in decimal)
+<SETVI> - asteroid (a) (1) - sets variable a to 1 (only works for integers)
+<SETVS> - comet (a) (testing) - sets variable a to testing (only works for strings)
+<PRINTV> - earth (a) - prints value of variable a to the screen (works with integers and strings, ASCII codes don't work.)
+<SFUN> - sun (v([inputs])) - starts the definition of function v
+<EFUN> - sun_end (v) - ends the definition of function v
+<FUNCL> - sun_run (v) - calls the function v
+<LSTRT> - quantum [if condition is true/false then] - starts a loop
+<LEND> - quantum_end - ends a loop
+<ONE> - blackhole a(+/-)1 - adds or subtracts 1 to/from variable a
+<CMT> - comment - starts a comment
+<::> - ends a comment
+<INFT> - vacuum - makes the program get stuck in an infinite loop
+<END> - bigfreeze - ends the entire program
+<0-9> -viable numbers
+<a-z,A-Z> - viable characters
+<\> - signals ascii code
+<LPAR> - ( - encloses var names or other inputs
+<RPAR> - ) - ends the statement above
+<LBRK> - [ - used for func inputs
+<RBRK> - ] - signals end of func inputs
+
+Changes:
+
+higgsfield - eliminated
+<;> - represents the end of a line
+<"> - represents the beginning or end of a string
+<,> - seperates variables in function calls
+Made sun end, sun run, and quantum end one word calls to make lex analysis easier
