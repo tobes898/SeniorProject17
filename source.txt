@@ -1,6 +1,0 @@
-quantum[5<4];
-quantum[6<4];
-quantum_end;
-quantum_end;
-asteroid(a)(6);
-
