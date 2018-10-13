@@ -63,7 +63,7 @@ In order to run the compiler, java needs to be installed this can be accomplishe
 3) Exit the terminal and then reopon it. java should now be installed. 
 
 # Installing the compiler
-1) On this github, navigate to the COSC251 folder.
+1) On this github, navigate to the current_version folder.
 2) Inside click on the InSpace Compiler.zip
 3) Click on the download button
 4) Press ok when the prompt shows up
