@@ -1,5 +1,5 @@
 # SeniorProject17
-Welcome to the flagship page for the InSpace compiler I built as my senior project! 
+Welcome to the flagship page for the InSpace compiler I built as my senior project! Please see the current_version folder for the most update version of the compiler.
 
 # Installation
 In its current state, the compiler is built to run on linux OS's only (Other OS support is hopefully coming in the future. Stay tuned!)
